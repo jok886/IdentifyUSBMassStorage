@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'IdentifyUSBMassStorage_Example' do
+  pod 'IdentifyUSBMassStorage', :path => '../'
+
+  target 'IdentifyUSBMassStorage_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
