@@ -8,7 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
+//VendorID should be an NSNumber object
 extern const NSString * __nonnull const kDiskDevicePropertyVendorID;
+//ProductID should be an NSNumber object
 extern const NSString * __nonnull const kDiskDevicePropertyProductID;
 
 @protocol IdentifyUSBMassStorageEvent
