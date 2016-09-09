@@ -1,0 +1,16 @@
+PODS:
+  - IdentifyUSBMassStorage (0.1.0)
+
+DEPENDENCIES:
+  - IdentifyUSBMassStorage (from `../`)
+
+EXTERNAL SOURCES:
+  IdentifyUSBMassStorage:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  IdentifyUSBMassStorage: 2859fa7c28cb3426d4fe2399b3ec349fef15f4a7
+
+PODFILE CHECKSUM: 04a6dbe7e945a92397efdae34f056ecc514fd416
+
+COCOAPODS: 1.0.1

@@ -1,0 +1,6 @@
+framework module IdentifyUSBMassStorage {
+  umbrella header "IdentifyUSBMassStorage-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -7,31 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		26AA9130BB28803F4925153D /* Pods_IdentifyUSBMassStorage_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D57822D3BD7D30F0D6B18767 /* Pods_IdentifyUSBMassStorage_Example.framework */; };
-		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
-		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
-		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
-		6003F598195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F596195388D20070C39A /* InfoPlist.strings */; };
-		6003F59A195388D20070C39A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F599195388D20070C39A /* main.m */; };
-		6003F59E195388D20070C39A /* NSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F59D195388D20070C39A /* NSAppDelegate.m */; };
-		6003F5A7195388D20070C39A /* NSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5A6195388D20070C39A /* NSViewController.m */; };
-		6003F5A9195388D20070C39A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5A8195388D20070C39A /* Images.xcassets */; };
-		6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F5AF195388D20070C39A /* XCTest.framework */; };
-		6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
-		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
-		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
-		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
-		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
-		D9CD05ABE41E37F9A7B327A4 /* Pods_IdentifyUSBMassStorage_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15F57C1FE5C2180A9859CFFB /* Pods_IdentifyUSBMassStorage_Tests.framework */; };
+		791907B5B81B3BC1C37D95C2 /* Pods_IdentifyUSBMassStorage_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15F57C1FE5C2180A9859CFFB /* Pods_IdentifyUSBMassStorage_Tests.framework */; };
+		C69D7E833EDDB0897DDA1A6C /* Pods_IdentifyUSBMassStorage_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D57822D3BD7D30F0D6B18767 /* Pods_IdentifyUSBMassStorage_Example.framework */; };
+		D3BAFBAB1D81423E00AB26E6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D3BAFBAA1D81423E00AB26E6 /* AppDelegate.m */; };
+		D3BAFBAE1D81423E00AB26E6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D3BAFBAD1D81423E00AB26E6 /* main.m */; };
+		D3BAFBB11D81423E00AB26E6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3BAFBB01D81423E00AB26E6 /* ViewController.m */; };
+		D3BAFBB31D81423E00AB26E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3BAFBB21D81423E00AB26E6 /* Assets.xcassets */; };
+		D3BAFBB61D81423E00AB26E6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3BAFBB41D81423E00AB26E6 /* Main.storyboard */; };
+		D3BAFBC21D81426E00AB26E6 /* IdentifyUSBMassStorage_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = D3BAFBC11D81426E00AB26E6 /* IdentifyUSBMassStorage_Tests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		6003F5B3195388D20070C39A /* PBXContainerItemProxy */ = {
+		D3BAFBC41D81426E00AB26E6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 6003F582195388D10070C39A /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 6003F589195388D20070C39A;
-			remoteInfo = IdentifyUSBMassStorage;
+			remoteGlobalIDString = D3BAFBA61D81423E00AB26E6;
+			remoteInfo = IdentifyUSBMassStorage_Example;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -41,52 +33,42 @@
 		1CA92FBCA640ABAA6536A352 /* Pods-IdentifyUSBMassStorage_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IdentifyUSBMassStorage_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-IdentifyUSBMassStorage_Example/Pods-IdentifyUSBMassStorage_Example.release.xcconfig"; sourceTree = "<group>"; };
 		3407919C3AB124849A20636B /* Pods-IdentifyUSBMassStorage_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IdentifyUSBMassStorage_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IdentifyUSBMassStorage_Tests/Pods-IdentifyUSBMassStorage_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		520375CB89C39B976B57F66B /* IdentifyUSBMassStorage.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = IdentifyUSBMassStorage.podspec; path = ../IdentifyUSBMassStorage.podspec; sourceTree = "<group>"; };
-		6003F58A195388D20070C39A /* IdentifyUSBMassStorage_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IdentifyUSBMassStorage_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		6003F591195388D20070C39A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		6003F595195388D20070C39A /* IdentifyUSBMassStorage-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "IdentifyUSBMassStorage-Info.plist"; sourceTree = "<group>"; };
-		6003F597195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		6003F599195388D20070C39A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		6003F59B195388D20070C39A /* IdentifyUSBMassStorage-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IdentifyUSBMassStorage-Prefix.pch"; sourceTree = "<group>"; };
-		6003F59C195388D20070C39A /* NSAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSAppDelegate.h; sourceTree = "<group>"; };
-		6003F59D195388D20070C39A /* NSAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSAppDelegate.m; sourceTree = "<group>"; };
-		6003F5A5195388D20070C39A /* NSViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSViewController.h; sourceTree = "<group>"; };
-		6003F5A6195388D20070C39A /* NSViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSViewController.m; sourceTree = "<group>"; };
-		6003F5A8195388D20070C39A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		6003F5AE195388D20070C39A /* IdentifyUSBMassStorage_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IdentifyUSBMassStorage_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F5AF195388D20070C39A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		6003F5B7195388D20070C39A /* Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tests-Info.plist"; sourceTree = "<group>"; };
-		6003F5B9195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
-		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		63D9C208D2D806F57E28FB5E /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		7481B4DEFC0C94A203FAB911 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		D3BAFBA71D81423E00AB26E6 /* IdentifyUSBMassStorage_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IdentifyUSBMassStorage_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3BAFBA91D81423E00AB26E6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D3BAFBAA1D81423E00AB26E6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D3BAFBAD1D81423E00AB26E6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D3BAFBAF1D81423E00AB26E6 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		D3BAFBB01D81423E00AB26E6 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		D3BAFBB21D81423E00AB26E6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D3BAFBB51D81423E00AB26E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D3BAFBB71D81423E00AB26E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D3BAFBBF1D81426E00AB26E6 /* IdentifyUSBMassStorage_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IdentifyUSBMassStorage_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3BAFBC11D81426E00AB26E6 /* IdentifyUSBMassStorage_Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IdentifyUSBMassStorage_Tests.m; sourceTree = "<group>"; };
+		D3BAFBC31D81426E00AB26E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D57822D3BD7D30F0D6B18767 /* Pods_IdentifyUSBMassStorage_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IdentifyUSBMassStorage_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E044135B489D0D6DF994AA46 /* Pods-IdentifyUSBMassStorage_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IdentifyUSBMassStorage_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-IdentifyUSBMassStorage_Tests/Pods-IdentifyUSBMassStorage_Tests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		6003F587195388D20070C39A /* Frameworks */ = {
+		D3BAFBA41D81423E00AB26E6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
-				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
-				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
-				26AA9130BB28803F4925153D /* Pods_IdentifyUSBMassStorage_Example.framework in Frameworks */,
+				C69D7E833EDDB0897DDA1A6C /* Pods_IdentifyUSBMassStorage_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6003F5AB195388D20070C39A /* Frameworks */ = {
+		D3BAFBBC1D81426E00AB26E6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */,
-				6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */,
-				6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */,
-				D9CD05ABE41E37F9A7B327A4 /* Pods_IdentifyUSBMassStorage_Tests.framework in Frameworks */,
+				791907B5B81B3BC1C37D95C2 /* Pods_IdentifyUSBMassStorage_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,8 +79,8 @@
 			isa = PBXGroup;
 			children = (
 				60FF7A9C1954A5C5007DD14C /* Podspec Metadata */,
-				6003F593195388D20070C39A /* Example for IdentifyUSBMassStorage */,
-				6003F5B5195388D20070C39A /* Tests */,
+				D3BAFBA81D81423E00AB26E6 /* IdentifyUSBMassStorage_Example */,
+				D3BAFBC01D81426E00AB26E6 /* IdentifyUSBMassStorage_Tests */,
 				6003F58C195388D20070C39A /* Frameworks */,
 				6003F58B195388D20070C39A /* Products */,
 				E43EF90F41CD22F50196964A /* Pods */,
@@ -108,8 +90,8 @@
 		6003F58B195388D20070C39A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6003F58A195388D20070C39A /* IdentifyUSBMassStorage_Example.app */,
-				6003F5AE195388D20070C39A /* IdentifyUSBMassStorage_Tests.xctest */,
+				D3BAFBA71D81423E00AB26E6 /* IdentifyUSBMassStorage_Example.app */,
+				D3BAFBBF1D81426E00AB26E6 /* IdentifyUSBMassStorage_Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -127,51 +109,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		6003F593195388D20070C39A /* Example for IdentifyUSBMassStorage */ = {
-			isa = PBXGroup;
-			children = (
-				6003F59C195388D20070C39A /* NSAppDelegate.h */,
-				6003F59D195388D20070C39A /* NSAppDelegate.m */,
-				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
-				6003F5A5195388D20070C39A /* NSViewController.h */,
-				6003F5A6195388D20070C39A /* NSViewController.m */,
-				6003F5A8195388D20070C39A /* Images.xcassets */,
-				6003F594195388D20070C39A /* Supporting Files */,
-			);
-			name = "Example for IdentifyUSBMassStorage";
-			path = IdentifyUSBMassStorage;
-			sourceTree = "<group>";
-		};
-		6003F594195388D20070C39A /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				6003F595195388D20070C39A /* IdentifyUSBMassStorage-Info.plist */,
-				6003F596195388D20070C39A /* InfoPlist.strings */,
-				6003F599195388D20070C39A /* main.m */,
-				6003F59B195388D20070C39A /* IdentifyUSBMassStorage-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		6003F5B5195388D20070C39A /* Tests */ = {
-			isa = PBXGroup;
-			children = (
-				6003F5BB195388D20070C39A /* Tests.m */,
-				6003F5B6195388D20070C39A /* Supporting Files */,
-			);
-			path = Tests;
-			sourceTree = "<group>";
-		};
-		6003F5B6195388D20070C39A /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				6003F5B7195388D20070C39A /* Tests-Info.plist */,
-				6003F5B8195388D20070C39A /* InfoPlist.strings */,
-				606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 		60FF7A9C1954A5C5007DD14C /* Podspec Metadata */ = {
 			isa = PBXGroup;
 			children = (
@@ -180,6 +117,38 @@
 				7481B4DEFC0C94A203FAB911 /* LICENSE */,
 			);
 			name = "Podspec Metadata";
+			sourceTree = "<group>";
+		};
+		D3BAFBA81D81423E00AB26E6 /* IdentifyUSBMassStorage_Example */ = {
+			isa = PBXGroup;
+			children = (
+				D3BAFBA91D81423E00AB26E6 /* AppDelegate.h */,
+				D3BAFBAA1D81423E00AB26E6 /* AppDelegate.m */,
+				D3BAFBAF1D81423E00AB26E6 /* ViewController.h */,
+				D3BAFBB01D81423E00AB26E6 /* ViewController.m */,
+				D3BAFBB21D81423E00AB26E6 /* Assets.xcassets */,
+				D3BAFBB41D81423E00AB26E6 /* Main.storyboard */,
+				D3BAFBB71D81423E00AB26E6 /* Info.plist */,
+				D3BAFBAC1D81423E00AB26E6 /* Supporting Files */,
+			);
+			path = IdentifyUSBMassStorage_Example;
+			sourceTree = "<group>";
+		};
+		D3BAFBAC1D81423E00AB26E6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D3BAFBAD1D81423E00AB26E6 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D3BAFBC01D81426E00AB26E6 /* IdentifyUSBMassStorage_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				D3BAFBC11D81426E00AB26E6 /* IdentifyUSBMassStorage_Tests.m */,
+				D3BAFBC31D81426E00AB26E6 /* Info.plist */,
+			);
+			path = IdentifyUSBMassStorage_Tests;
 			sourceTree = "<group>";
 		};
 		E43EF90F41CD22F50196964A /* Pods */ = {
@@ -196,45 +165,45 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		6003F589195388D20070C39A /* IdentifyUSBMassStorage_Example */ = {
+		D3BAFBA61D81423E00AB26E6 /* IdentifyUSBMassStorage_Example */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6003F5BF195388D20070C39A /* Build configuration list for PBXNativeTarget "IdentifyUSBMassStorage_Example" */;
+			buildConfigurationList = D3BAFBB81D81423E00AB26E6 /* Build configuration list for PBXNativeTarget "IdentifyUSBMassStorage_Example" */;
 			buildPhases = (
-				3D79ED3C1F8B9310C57E39A8 /* [CP] Check Pods Manifest.lock */,
-				6003F586195388D20070C39A /* Sources */,
-				6003F587195388D20070C39A /* Frameworks */,
-				6003F588195388D20070C39A /* Resources */,
-				DFE70E6AE10888B3D45D725E /* [CP] Embed Pods Frameworks */,
-				BBD0CAB11763FFFE10C36418 /* [CP] Copy Pods Resources */,
+				C6BA84A136ADDCB07A84BABA /* [CP] Check Pods Manifest.lock */,
+				D3BAFBA31D81423E00AB26E6 /* Sources */,
+				D3BAFBA41D81423E00AB26E6 /* Frameworks */,
+				D3BAFBA51D81423E00AB26E6 /* Resources */,
+				D747259ABE5F1FEF116957A1 /* [CP] Embed Pods Frameworks */,
+				0E176FF8FE2DED054D0C490E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = IdentifyUSBMassStorage_Example;
-			productName = IdentifyUSBMassStorage;
-			productReference = 6003F58A195388D20070C39A /* IdentifyUSBMassStorage_Example.app */;
+			productName = IdentifyUSBMassStorage_Example;
+			productReference = D3BAFBA71D81423E00AB26E6 /* IdentifyUSBMassStorage_Example.app */;
 			productType = "com.apple.product-type.application";
 		};
-		6003F5AD195388D20070C39A /* IdentifyUSBMassStorage_Tests */ = {
+		D3BAFBBE1D81426E00AB26E6 /* IdentifyUSBMassStorage_Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6003F5C2195388D20070C39A /* Build configuration list for PBXNativeTarget "IdentifyUSBMassStorage_Tests" */;
+			buildConfigurationList = D3BAFBC61D81426E00AB26E6 /* Build configuration list for PBXNativeTarget "IdentifyUSBMassStorage_Tests" */;
 			buildPhases = (
-				C432C089169AEE0F84E0B4F2 /* [CP] Check Pods Manifest.lock */,
-				6003F5AA195388D20070C39A /* Sources */,
-				6003F5AB195388D20070C39A /* Frameworks */,
-				6003F5AC195388D20070C39A /* Resources */,
-				0AA1E9D84209CE9093C6D8AC /* [CP] Embed Pods Frameworks */,
-				658953D89FD74CE015D0E0B8 /* [CP] Copy Pods Resources */,
+				B759FA031D8059E8BC5309B2 /* [CP] Check Pods Manifest.lock */,
+				D3BAFBBB1D81426E00AB26E6 /* Sources */,
+				D3BAFBBC1D81426E00AB26E6 /* Frameworks */,
+				D3BAFBBD1D81426E00AB26E6 /* Resources */,
+				3B3F2BBCCF8BD35F7AE6008E /* [CP] Embed Pods Frameworks */,
+				7542C5A78F76E648E16BE575 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				6003F5B4195388D20070C39A /* PBXTargetDependency */,
+				D3BAFBC51D81426E00AB26E6 /* PBXTargetDependency */,
 			);
 			name = IdentifyUSBMassStorage_Tests;
-			productName = IdentifyUSBMassStorageTests;
-			productReference = 6003F5AE195388D20070C39A /* IdentifyUSBMassStorage_Tests.xctest */;
+			productName = IdentifyUSBMassStorage_Tests;
+			productReference = D3BAFBBF1D81426E00AB26E6 /* IdentifyUSBMassStorage_Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -247,8 +216,12 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "raxcat liu";
 				TargetAttributes = {
-					6003F5AD195388D20070C39A = {
-						TestTargetID = 6003F589195388D20070C39A;
+					D3BAFBA61D81423E00AB26E6 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					D3BAFBBE1D81426E00AB26E6 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = D3BAFBA61D81423E00AB26E6;
 					};
 				};
 			};
@@ -265,80 +238,33 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				6003F589195388D20070C39A /* IdentifyUSBMassStorage_Example */,
-				6003F5AD195388D20070C39A /* IdentifyUSBMassStorage_Tests */,
+				D3BAFBA61D81423E00AB26E6 /* IdentifyUSBMassStorage_Example */,
+				D3BAFBBE1D81426E00AB26E6 /* IdentifyUSBMassStorage_Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		6003F588195388D20070C39A /* Resources */ = {
+		D3BAFBA51D81423E00AB26E6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
-				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
-				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
+				D3BAFBB31D81423E00AB26E6 /* Assets.xcassets in Resources */,
+				D3BAFBB61D81423E00AB26E6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6003F5AC195388D20070C39A /* Resources */ = {
+		D3BAFBBD1D81426E00AB26E6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0AA1E9D84209CE9093C6D8AC /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IdentifyUSBMassStorage_Tests/Pods-IdentifyUSBMassStorage_Tests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		3D79ED3C1F8B9310C57E39A8 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		658953D89FD74CE015D0E0B8 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IdentifyUSBMassStorage_Tests/Pods-IdentifyUSBMassStorage_Tests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		BBD0CAB11763FFFE10C36418 /* [CP] Copy Pods Resources */ = {
+		0E176FF8FE2DED054D0C490E /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -353,7 +279,37 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IdentifyUSBMassStorage_Example/Pods-IdentifyUSBMassStorage_Example-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C432C089169AEE0F84E0B4F2 /* [CP] Check Pods Manifest.lock */ = {
+		3B3F2BBCCF8BD35F7AE6008E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IdentifyUSBMassStorage_Tests/Pods-IdentifyUSBMassStorage_Tests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7542C5A78F76E648E16BE575 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IdentifyUSBMassStorage_Tests/Pods-IdentifyUSBMassStorage_Tests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B759FA031D8059E8BC5309B2 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -368,7 +324,22 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		DFE70E6AE10888B3D45D725E /* [CP] Embed Pods Frameworks */ = {
+		C6BA84A136ADDCB07A84BABA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D747259ABE5F1FEF116957A1 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -386,49 +357,41 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		6003F586195388D20070C39A /* Sources */ = {
+		D3BAFBA31D81423E00AB26E6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6003F59E195388D20070C39A /* NSAppDelegate.m in Sources */,
-				6003F5A7195388D20070C39A /* NSViewController.m in Sources */,
-				6003F59A195388D20070C39A /* main.m in Sources */,
+				D3BAFBB11D81423E00AB26E6 /* ViewController.m in Sources */,
+				D3BAFBAE1D81423E00AB26E6 /* main.m in Sources */,
+				D3BAFBAB1D81423E00AB26E6 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6003F5AA195388D20070C39A /* Sources */ = {
+		D3BAFBBB1D81426E00AB26E6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6003F5BC195388D20070C39A /* Tests.m in Sources */,
+				D3BAFBC21D81426E00AB26E6 /* IdentifyUSBMassStorage_Tests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		6003F5B4195388D20070C39A /* PBXTargetDependency */ = {
+		D3BAFBC51D81426E00AB26E6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 6003F589195388D20070C39A /* IdentifyUSBMassStorage_Example */;
-			targetProxy = 6003F5B3195388D20070C39A /* PBXContainerItemProxy */;
+			target = D3BAFBA61D81423E00AB26E6 /* IdentifyUSBMassStorage_Example */;
+			targetProxy = D3BAFBC41D81426E00AB26E6 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		6003F596195388D20070C39A /* InfoPlist.strings */ = {
+		D3BAFBB41D81423E00AB26E6 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				6003F597195388D20070C39A /* en */,
+				D3BAFBB51D81423E00AB26E6 /* Base */,
 			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		6003F5B8195388D20070C39A /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6003F5B9195388D20070C39A /* en */,
-			);
-			name = InfoPlist.strings;
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -507,79 +470,95 @@
 			};
 			name = Release;
 		};
-		6003F5C0195388D20070C39A /* Debug */ = {
+		D3BAFBB91D81423E00AB26E6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0D40D4CD89DC873C5A8C0B27 /* Pods-IdentifyUSBMassStorage_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "IdentifyUSBMassStorage/IdentifyUSBMassStorage-Prefix.pch";
-				INFOPLIST_FILE = "IdentifyUSBMassStorage/IdentifyUSBMassStorage-Info.plist";
-				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = IdentifyUSBMassStorage_Example/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.winnerwave.IdentifyUSBMassStorage-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = app;
+				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
-		6003F5C1195388D20070C39A /* Release */ = {
+		D3BAFBBA1D81423E00AB26E6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1CA92FBCA640ABAA6536A352 /* Pods-IdentifyUSBMassStorage_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "IdentifyUSBMassStorage/IdentifyUSBMassStorage-Prefix.pch";
-				INFOPLIST_FILE = "IdentifyUSBMassStorage/IdentifyUSBMassStorage-Info.plist";
-				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = IdentifyUSBMassStorage_Example/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.winnerwave.IdentifyUSBMassStorage-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = app;
+				SDKROOT = macosx;
 			};
 			name = Release;
 		};
-		6003F5C3195388D20070C39A /* Debug */ = {
+		D3BAFBC71D81426E00AB26E6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3407919C3AB124849A20636B /* Pods-IdentifyUSBMassStorage_Tests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Tests/Tests-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "Tests/Tests-Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = IdentifyUSBMassStorage_Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.winnerwave.IdentifyUSBMassStorage-Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IdentifyUSBMassStorage_Example.app/IdentifyUSBMassStorage_Example";
-				WRAPPER_EXTENSION = xctest;
+				SDKROOT = macosx;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IdentifyUSBMassStorage_Example.app/Contents/MacOS/IdentifyUSBMassStorage_Example";
 			};
 			name = Debug;
 		};
-		6003F5C4195388D20070C39A /* Release */ = {
+		D3BAFBC81D81426E00AB26E6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E044135B489D0D6DF994AA46 /* Pods-IdentifyUSBMassStorage_Tests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Tests/Tests-Prefix.pch";
-				INFOPLIST_FILE = "Tests/Tests-Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = IdentifyUSBMassStorage_Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.winnerwave.IdentifyUSBMassStorage-Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IdentifyUSBMassStorage_Example.app/IdentifyUSBMassStorage_Example";
-				WRAPPER_EXTENSION = xctest;
+				SDKROOT = macosx;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IdentifyUSBMassStorage_Example.app/Contents/MacOS/IdentifyUSBMassStorage_Example";
 			};
 			name = Release;
 		};
@@ -595,20 +574,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6003F5BF195388D20070C39A /* Build configuration list for PBXNativeTarget "IdentifyUSBMassStorage_Example" */ = {
+		D3BAFBB81D81423E00AB26E6 /* Build configuration list for PBXNativeTarget "IdentifyUSBMassStorage_Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6003F5C0195388D20070C39A /* Debug */,
-				6003F5C1195388D20070C39A /* Release */,
+				D3BAFBB91D81423E00AB26E6 /* Debug */,
+				D3BAFBBA1D81423E00AB26E6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6003F5C2195388D20070C39A /* Build configuration list for PBXNativeTarget "IdentifyUSBMassStorage_Tests" */ = {
+		D3BAFBC61D81426E00AB26E6 /* Build configuration list for PBXNativeTarget "IdentifyUSBMassStorage_Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6003F5C3195388D20070C39A /* Debug */,
-				6003F5C4195388D20070C39A /* Release */,
+				D3BAFBC71D81426E00AB26E6 /* Debug */,
+				D3BAFBC81D81426E00AB26E6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

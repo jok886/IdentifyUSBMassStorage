@@ -1,0 +1,23 @@
+{
+  "name": "IdentifyUSBMassStorage",
+  "version": "0.1.0",
+  "summary": "A short description of IdentifyUSBMassStorage.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/<GITHUB_USERNAME>/IdentifyUSBMassStorage",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "raxcat liu": "raxcat@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/<GITHUB_USERNAME>/IdentifyUSBMassStorage.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "osx": "10.9"
+  },
+  "source_files": "IdentifyUSBMassStorage/Classes/**/*",
+  "frameworks": "IOKit"
+}

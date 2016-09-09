@@ -1,0 +1,6 @@
+framework module Pods_IdentifyUSBMassStorage_Example {
+  umbrella header "Pods-IdentifyUSBMassStorage_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}
