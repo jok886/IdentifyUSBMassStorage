@@ -25,7 +25,7 @@ Identify usb info(ProductID, VendorID.) from a mass storage device.
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'raxcat liu' => 'raxcat@gmail.com' }
-  s.source           = { :git => 'https://github.com/<GITHUB_USERNAME>/IdentifyUSBMassStorage.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/raxcat/IdentifyUSBMassStorage.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.osx.deployment_target = '10.9'
