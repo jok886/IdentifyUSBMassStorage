@@ -202,7 +202,7 @@ static bool getVidAndPid(io_service_t device, int *vid, int *pid)
     int vid = [[self class] getVid:disk];
     int pid = [[self class] getPid:disk];
         NSString * volumePath = [[self class] getVolumePath:disk];
-        NSLog(@"removed ----> vid: 0x%x, pid:0x%x, volume path:%@", vid, pid, volumePath);
+//        NSLog(@"removed ----> vid: 0x%x, pid:0x%x, volume path:%@", vid, pid, volumePath);
     
 }
 
