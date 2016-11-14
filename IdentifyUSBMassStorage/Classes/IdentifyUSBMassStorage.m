@@ -201,8 +201,39 @@ static bool getVidAndPid(io_service_t device, int *vid, int *pid)
 -(void)diskGotRemoved:(DADiskRef __nonnull)disk{
     int vid = [[self class] getVid:disk];
     int pid = [[self class] getPid:disk];
-        NSString * volumePath = [[self class] getVolumePath:disk];
-//        NSLog(@"removed ----> vid: 0x%x, pid:0x%x, volume path:%@", vid, pid, volumePath);
+    NSString * volumePath = [[self class] getVolumePath:disk];
+//    NSLog(@"removed ----> vid: 0x%x, pid:0x%x, volume path:%@", vid, pid, volumePath);
+    for (NSValue * value in _listeners) {
+        id<IdentifyUSBMassStorageEvent> listener = [value nonretainedObjectValue];
+        NSDictionary * matchingDict = nil;
+        if([listener respondsToSelector:@selector(matchingDict)]){
+            matchingDict = [listener matchingDict];
+        }
+        if(matchingDict.allKeys.count == 0){    //matching all
+            [listener massStorageDeviceDidPlugOut:disk];
+        }else if(matchingDict.allKeys.count == 1){
+            if(matchingDict[kDiskDevicePropertyProductID] != nil ){
+                int matchingPid = ((NSNumber*)matchingDict[kDiskDevicePropertyProductID]).intValue;
+                if (matchingPid == pid) {
+                    [listener massStorageDeviceDidPlugOut:disk];
+                }
+            }
+            else if(matchingDict[kDiskDevicePropertyVendorID] != nil ){
+                int matchingVid = ((NSNumber*)matchingDict[kDiskDevicePropertyVendorID]).intValue;
+                if(matchingVid == vid){
+                    [listener massStorageDeviceDidPlugOut:disk];
+                }
+            }
+        }else{
+            int matchingPid = ((NSNumber*)matchingDict[kDiskDevicePropertyProductID]).intValue;
+            int matchingVid = ((NSNumber*)matchingDict[kDiskDevicePropertyVendorID]).intValue;
+            
+            if(matchingVid == vid && matchingPid == pid){
+                [listener massStorageDeviceDidPlugOut:disk];
+            }
+        }
+        
+    }
     
 }
 
