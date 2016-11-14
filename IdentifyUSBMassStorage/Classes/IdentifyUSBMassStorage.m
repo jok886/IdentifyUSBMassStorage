@@ -148,7 +148,7 @@ static bool getVidAndPid(io_service_t device, int *vid, int *pid)
 
 @implementation IdentifyUSBMassStorage
 
-+(IdentifyUSBMassStorage*)shareManager{
++(IdentifyUSBMassStorage*)sharedManager{
     static dispatch_once_t once;
     static id sharedInstance;
     dispatch_once(&once, ^{

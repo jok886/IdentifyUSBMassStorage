@@ -41,7 +41,7 @@ extern const NSString * __nonnull const kDiskDevicePropertyProductID;
 @interface IdentifyUSBMassStorage : NSObject
 
 //Get shared singlton manager object.
-+(IdentifyUSBMassStorage * __nonnull)shareManager;
++(IdentifyUSBMassStorage * __nonnull)sharedManager;
 
 //Utility: Get USB pid (if any) from a DADiskRef. May be 0.
 +(int)getPid:(DADiskRef __nonnull)disk;
