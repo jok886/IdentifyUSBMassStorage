@@ -213,7 +213,11 @@ static bool getVidAndPid(io_service_t device, int *vid, int *pid)
     
     for (NSValue * value in _listeners) {
         id<IdentifyUSBMassStorageEvent> listener = [value nonretainedObjectValue];
-        NSDictionary * matchingDict = [listener matchingDict];
+        NSDictionary * matchingDict = nil;
+
+        if([listener respondsToSelector:@selector(matchingDict)]){
+            matchingDict = [listener matchingDict];
+        }
         if(matchingDict.allKeys.count == 0){    //matching all
             [listener massStorageDeviceDidPlugIn:disk];
 
