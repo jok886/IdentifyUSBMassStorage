@@ -190,11 +190,11 @@ static bool getVidAndPid(io_service_t device, int *vid, int *pid)
     }
 }
 
--(void)addMassStorageDeviceEventListener:(id __nonnull)listener{
+-(void)addMassStorageDeviceEventListener:(id<IdentifyUSBMassStorageEvent> __nonnull)listener{
     [_listeners addObject:[NSValue valueWithNonretainedObject:listener]];
 }
 
--(void)removeMassStorageDeviceEventListener:(id __nonnull)listener{
+-(void)removeMassStorageDeviceEventListener:(id<IdentifyUSBMassStorageEvent> __nonnull)listener{
     [_listeners removeObject:[NSValue valueWithNonretainedObject:listener]];
 }
 
