@@ -13,8 +13,8 @@ extern const NSString * __nonnull const kDiskDevicePropertyVendorID;
 //ProductID should be an NSNumber object
 extern const NSString * __nonnull const kDiskDevicePropertyProductID;
 
-@protocol IdentifyUSBMassStorageEvent
-
+@protocol IdentifyUSBMassStorageEvent<NSObject>
+@optional
 /**
  Works only for plugin event.
  
