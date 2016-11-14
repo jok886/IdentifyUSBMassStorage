@@ -41,7 +41,7 @@ void got_Volumed(DADiskRef disk, CFArrayRef keys, void *context)
     
     char buf[MAXPATHLEN];
     if (CFURLGetFileSystemRepresentation(fspath, false, (UInt8 *)buf, sizeof(buf))) {
-        printf("Disk %s is now at %s\nChanged keys:\n", DADiskGetBSDName(disk), buf);
+//        printf("Disk %s is now at %s\nChanged keys:\n", DADiskGetBSDName(disk), buf);
         IdentifyUSBMassStorage * manager = (__bridge IdentifyUSBMassStorage*)context;
         [manager diskGotVolumePath:disk];
         
