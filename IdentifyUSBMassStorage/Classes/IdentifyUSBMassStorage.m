@@ -41,7 +41,7 @@ void got_Volumed(DADiskRef disk, CFArrayRef keys, void *context)
     
     char buf[MAXPATHLEN];
     if (CFURLGetFileSystemRepresentation(fspath, false, (UInt8 *)buf, sizeof(buf))) {
-        printf("Disk %s is now at %s\nChanged keys:\n", DADiskGetBSDName(disk), buf);
+//        printf("Disk %s is now at %s\nChanged keys:\n", DADiskGetBSDName(disk), buf);
         IdentifyUSBMassStorage * manager = (__bridge IdentifyUSBMassStorage*)context;
         [manager diskGotVolumePath:disk];
         
@@ -148,7 +148,7 @@ static bool getVidAndPid(io_service_t device, int *vid, int *pid)
 
 @implementation IdentifyUSBMassStorage
 
-+(IdentifyUSBMassStorage*)shareManager{
++(IdentifyUSBMassStorage*)sharedManager{
     static dispatch_once_t once;
     static id sharedInstance;
     dispatch_once(&once, ^{
@@ -190,19 +190,65 @@ static bool getVidAndPid(io_service_t device, int *vid, int *pid)
     }
 }
 
--(void)addMassStorageDeviceEventListener:(id __nonnull)listener{
+-(void)addMassStorageDeviceEventListener:(id<IdentifyUSBMassStorageEvent> __nonnull)listener{
     [_listeners addObject:[NSValue valueWithNonretainedObject:listener]];
+    
+    NSArray<NSURL*>* currentList = [[NSFileManager defaultManager] mountedVolumeURLsIncludingResourceValuesForKeys:@[NSURLVolumeNameKey, NSURLVolumeIsRemovableKey, NSURLVolumeIsEjectableKey] options:nil];
+    
+    for (NSURL * url in currentList) {
+//        NSLog(@"%@", url.path);
+        if(url.path.length > 0 ){
+            DADiskRef disk = DADiskCreateFromVolumePath(kCFAllocatorDefault, _session, (__bridge CFURLRef) url);
+//            NSLog(@"%p", disk);
+            [self diskGotVolumePath:disk];
+        }
+    }
+    
+//    NSLog(@"%@", currentList);
+    
+    
 }
 
--(void)removeMassStorageDeviceEventListener:(id __nonnull)listener{
+-(void)removeMassStorageDeviceEventListener:(id<IdentifyUSBMassStorageEvent> __nonnull)listener{
     [_listeners removeObject:[NSValue valueWithNonretainedObject:listener]];
 }
 
 -(void)diskGotRemoved:(DADiskRef __nonnull)disk{
     int vid = [[self class] getVid:disk];
     int pid = [[self class] getPid:disk];
-        NSString * volumePath = [[self class] getVolumePath:disk];
-        NSLog(@"removed ----> vid: 0x%x, pid:0x%x, volume path:%@", vid, pid, volumePath);
+    NSString * volumePath = [[self class] getVolumePath:disk];
+//    NSLog(@"removed ----> vid: 0x%x, pid:0x%x, volume path:%@", vid, pid, volumePath);
+    for (NSValue * value in _listeners) {
+        id<IdentifyUSBMassStorageEvent> listener = [value nonretainedObjectValue];
+        NSDictionary * matchingDict = nil;
+        if([listener respondsToSelector:@selector(matchingDict)]){
+            matchingDict = [listener matchingDict];
+        }
+        if(matchingDict.allKeys.count == 0){    //matching all
+            [listener massStorageDeviceDidPlugOut:disk];
+        }else if(matchingDict.allKeys.count == 1){
+            if(matchingDict[kDiskDevicePropertyProductID] != nil ){
+                int matchingPid = ((NSNumber*)matchingDict[kDiskDevicePropertyProductID]).intValue;
+                if (matchingPid == pid) {
+                    [listener massStorageDeviceDidPlugOut:disk];
+                }
+            }
+            else if(matchingDict[kDiskDevicePropertyVendorID] != nil ){
+                int matchingVid = ((NSNumber*)matchingDict[kDiskDevicePropertyVendorID]).intValue;
+                if(matchingVid == vid){
+                    [listener massStorageDeviceDidPlugOut:disk];
+                }
+            }
+        }else{
+            int matchingPid = ((NSNumber*)matchingDict[kDiskDevicePropertyProductID]).intValue;
+            int matchingVid = ((NSNumber*)matchingDict[kDiskDevicePropertyVendorID]).intValue;
+            
+            if(matchingVid == vid && matchingPid == pid){
+                [listener massStorageDeviceDidPlugOut:disk];
+            }
+        }
+        
+    }
     
 }
 
@@ -213,7 +259,11 @@ static bool getVidAndPid(io_service_t device, int *vid, int *pid)
     
     for (NSValue * value in _listeners) {
         id<IdentifyUSBMassStorageEvent> listener = [value nonretainedObjectValue];
-        NSDictionary * matchingDict = [listener matchingDict];
+        NSDictionary * matchingDict = nil;
+
+        if([listener respondsToSelector:@selector(matchingDict)]){
+            matchingDict = [listener matchingDict];
+        }
         if(matchingDict.allKeys.count == 0){    //matching all
             [listener massStorageDeviceDidPlugIn:disk];
 
