@@ -192,6 +192,21 @@ static bool getVidAndPid(io_service_t device, int *vid, int *pid)
 
 -(void)addMassStorageDeviceEventListener:(id<IdentifyUSBMassStorageEvent> __nonnull)listener{
     [_listeners addObject:[NSValue valueWithNonretainedObject:listener]];
+    
+    NSArray<NSURL*>* currentList = [[NSFileManager defaultManager] mountedVolumeURLsIncludingResourceValuesForKeys:@[NSURLVolumeNameKey, NSURLVolumeIsRemovableKey, NSURLVolumeIsEjectableKey] options:nil];
+    
+    for (NSURL * url in currentList) {
+//        NSLog(@"%@", url.path);
+        if(url.path.length > 0 ){
+            DADiskRef disk = DADiskCreateFromVolumePath(kCFAllocatorDefault, _session, (__bridge CFURLRef) url);
+//            NSLog(@"%p", disk);
+            [self diskGotVolumePath:disk];
+        }
+    }
+    
+//    NSLog(@"%@", currentList);
+    
+    
 }
 
 -(void)removeMassStorageDeviceEventListener:(id<IdentifyUSBMassStorageEvent> __nonnull)listener{
