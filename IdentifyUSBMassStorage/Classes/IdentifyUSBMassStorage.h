@@ -13,8 +13,8 @@ extern const NSString * __nonnull const kDiskDevicePropertyVendorID;
 //ProductID should be an NSNumber object
 extern const NSString * __nonnull const kDiskDevicePropertyProductID;
 
-@protocol IdentifyUSBMassStorageEvent
-
+@protocol IdentifyUSBMassStorageEvent<NSObject>
+@optional
 /**
  Works only for plugin event.
  
@@ -41,7 +41,7 @@ extern const NSString * __nonnull const kDiskDevicePropertyProductID;
 @interface IdentifyUSBMassStorage : NSObject
 
 //Get shared singlton manager object.
-+(IdentifyUSBMassStorage * __nonnull)shareManager;
++(IdentifyUSBMassStorage * __nonnull)sharedManager;
 
 //Utility: Get USB pid (if any) from a DADiskRef. May be 0.
 +(int)getPid:(DADiskRef __nonnull)disk;
@@ -50,10 +50,10 @@ extern const NSString * __nonnull const kDiskDevicePropertyProductID;
 +(int)getVid:(DADiskRef __nonnull)disk;
 
 //Utility: Get mounted volume path (if any) from a DADiskRef. Nullable.
-+(NSString*__nullable)getVolumePath:(DADiskRef __nonnull)disk;
++(NSString* __nullable)getVolumePath:(DADiskRef __nonnull)disk;
 
--(void)addMassStorageDeviceEventListener:(id __nonnull)listener;
+-(void)addMassStorageDeviceEventListener:(id<IdentifyUSBMassStorageEvent> __nonnull )listener;
 
--(void)removeMassStorageDeviceEventListener:(id __nonnull)listener;
+-(void)removeMassStorageDeviceEventListener:(id<IdentifyUSBMassStorageEvent> __nonnull)listener;
 
 @end
