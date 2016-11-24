@@ -52,6 +52,8 @@ extern const NSString * __nonnull const kDiskDevicePropertyProductID;
 //Utility: Get mounted volume path (if any) from a DADiskRef. Nullable.
 +(NSString* __nullable)getVolumePath:(DADiskRef __nonnull)disk;
 
+@property (nonatomic, nullable) dispatch_queue_t callbackQueue;
+
 -(void)addMassStorageDeviceEventListener:(id<IdentifyUSBMassStorageEvent> __nonnull )listener;
 
 -(void)removeMassStorageDeviceEventListener:(id<IdentifyUSBMassStorageEvent> __nonnull)listener;

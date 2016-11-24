@@ -190,6 +190,13 @@ static bool getVidAndPid(io_service_t device, int *vid, int *pid)
     }
 }
 
+-(dispatch_queue_t)callbackQueue{
+    if(_callbackQueue==nil){
+        return dispatch_get_main_queue();
+    }
+    return _callbackQueue;
+}
+
 -(void)addMassStorageDeviceEventListener:(id<IdentifyUSBMassStorageEvent> __nonnull)listener{
     [_listeners addObject:[NSValue valueWithNonretainedObject:listener]];
     
@@ -225,18 +232,24 @@ static bool getVidAndPid(io_service_t device, int *vid, int *pid)
             matchingDict = [listener matchingDict];
         }
         if(matchingDict.allKeys.count == 0){    //matching all
-            [listener massStorageDeviceDidPlugOut:disk];
+            dispatch_async(self.callbackQueue, ^{
+                [listener massStorageDeviceDidPlugOut:disk];
+            });
         }else if(matchingDict.allKeys.count == 1){
             if(matchingDict[kDiskDevicePropertyProductID] != nil ){
                 int matchingPid = ((NSNumber*)matchingDict[kDiskDevicePropertyProductID]).intValue;
                 if (matchingPid == pid) {
-                    [listener massStorageDeviceDidPlugOut:disk];
+                    dispatch_async(self.callbackQueue, ^{
+                        [listener massStorageDeviceDidPlugOut:disk];
+                    });
                 }
             }
             else if(matchingDict[kDiskDevicePropertyVendorID] != nil ){
                 int matchingVid = ((NSNumber*)matchingDict[kDiskDevicePropertyVendorID]).intValue;
                 if(matchingVid == vid){
-                    [listener massStorageDeviceDidPlugOut:disk];
+                    dispatch_async(self.callbackQueue, ^{
+                        [listener massStorageDeviceDidPlugOut:disk];
+                    });
                 }
             }
         }else{
@@ -244,7 +257,9 @@ static bool getVidAndPid(io_service_t device, int *vid, int *pid)
             int matchingVid = ((NSNumber*)matchingDict[kDiskDevicePropertyVendorID]).intValue;
             
             if(matchingVid == vid && matchingPid == pid){
-                [listener massStorageDeviceDidPlugOut:disk];
+                dispatch_async(self.callbackQueue, ^{
+                    [listener massStorageDeviceDidPlugOut:disk];
+                });
             }
         }
         
@@ -265,20 +280,25 @@ static bool getVidAndPid(io_service_t device, int *vid, int *pid)
             matchingDict = [listener matchingDict];
         }
         if(matchingDict.allKeys.count == 0){    //matching all
-            [listener massStorageDeviceDidPlugIn:disk];
-
+            dispatch_async(self.callbackQueue, ^{
+                [listener massStorageDeviceDidPlugIn:disk];
+            });
         }else if(matchingDict.allKeys.count == 1){    //matching one of them
             
             if(matchingDict[kDiskDevicePropertyProductID] != nil ){
                 int matchingPid = ((NSNumber*)matchingDict[kDiskDevicePropertyProductID]).intValue;
                 if (matchingPid == pid) {
-                    [listener massStorageDeviceDidPlugIn:disk];
+                    dispatch_async(self.callbackQueue, ^{
+                        [listener massStorageDeviceDidPlugIn:disk];
+                    });
                 }
             }
             else if(matchingDict[kDiskDevicePropertyVendorID] != nil ){
                 int matchingVid = ((NSNumber*)matchingDict[kDiskDevicePropertyVendorID]).intValue;
                 if(matchingVid == vid){
-                    [listener massStorageDeviceDidPlugIn:disk];
+                    dispatch_async(self.callbackQueue, ^{
+                        [listener massStorageDeviceDidPlugIn:disk];
+                    });
                 }
             }
         }else{
@@ -286,7 +306,9 @@ static bool getVidAndPid(io_service_t device, int *vid, int *pid)
             int matchingVid = ((NSNumber*)matchingDict[kDiskDevicePropertyVendorID]).intValue;
             
             if(matchingVid == vid && matchingPid == pid){
-                [listener massStorageDeviceDidPlugIn:disk];
+                dispatch_async(self.callbackQueue, ^{
+                    [listener massStorageDeviceDidPlugIn:disk];
+                });
             }
         }
     }
