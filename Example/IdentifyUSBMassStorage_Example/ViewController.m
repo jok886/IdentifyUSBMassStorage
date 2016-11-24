@@ -18,7 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    [[IdentifyUSBMassStorage shareManager] addMassStorageDeviceEventListener:self];
+    [[IdentifyUSBMassStorage sharedManager] addMassStorageDeviceEventListener:self];
 }
 
 - (void)setRepresentedObject:(id)representedObject {
