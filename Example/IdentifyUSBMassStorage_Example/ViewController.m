@@ -50,7 +50,7 @@
     
 }
 
--(void)massStorageDeviceDidPlugOut:(NSString)path{
+-(void)massStorageDeviceDidPlugOut:(NSString*)path{
     
 }
 
