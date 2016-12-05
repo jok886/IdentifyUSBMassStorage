@@ -25,7 +25,7 @@ extern const NSString * __nonnull const kDiskDevicePropertyProductID;
 -(NSDictionary* __nullable)matchingDict;
 
 /**
-  Specify matchingDict to the plugin event of your desired vid,pid.
+ Specify matchingDict to the plugin event of your desired vid,pid.
  */
 -(void)massStorageDeviceDidPlugIn:(DADiskRef __nonnull)disk;
 
@@ -33,7 +33,7 @@ extern const NSString * __nonnull const kDiskDevicePropertyProductID;
  All events will be sent. matchingDict has nothing to do with this event.
  Note: After usb mass storage has been plugout, the vid,pid and mounted volume path will all be nil if you try to get them from utility functions.
  */
--(void)massStorageDeviceDidPlugOut:(DADiskRef __nonnull)disk;
+-(void)massStorageDeviceDidPlugOut:(NSString * __nullable)path;
 
 @end
 
