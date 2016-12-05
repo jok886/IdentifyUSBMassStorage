@@ -41,7 +41,7 @@ void got_Volumed(DADiskRef disk, CFArrayRef keys, void *context)
     
     char buf[MAXPATHLEN];
     if (CFURLGetFileSystemRepresentation(fspath, false, (UInt8 *)buf, sizeof(buf))) {
-//        printf("Disk %s is now at %s\nChanged keys:\n", DADiskGetBSDName(disk), buf);
+        //        printf("Disk %s is now at %s\nChanged keys:\n", DADiskGetBSDName(disk), buf);
         IdentifyUSBMassStorage * manager = (__bridge IdentifyUSBMassStorage*)context;
         [manager diskGotVolumePath:disk];
         
@@ -52,7 +52,7 @@ void got_Volumed(DADiskRef disk, CFArrayRef keys, void *context)
 
 void got_disk_removal(DADiskRef disk, void *context)
 {
-//    printf("Disk removed: %s\n", DADiskGetBSDName(disk));
+    //    printf("Disk removed: %s\n", DADiskGetBSDName(disk));
     IdentifyUSBMassStorage * manager = (__bridge IdentifyUSBMassStorage*)context;
     [manager diskGotRemoved:disk];
 }
@@ -203,15 +203,15 @@ static bool getVidAndPid(io_service_t device, int *vid, int *pid)
     NSArray<NSURL*>* currentList = [[NSFileManager defaultManager] mountedVolumeURLsIncludingResourceValuesForKeys:@[NSURLVolumeNameKey, NSURLVolumeIsRemovableKey, NSURLVolumeIsEjectableKey] options:nil];
     
     for (NSURL * url in currentList) {
-//        NSLog(@"%@", url.path);
+        //        NSLog(@"%@", url.path);
         if(url.path.length > 0 ){
             DADiskRef disk = DADiskCreateFromVolumePath(kCFAllocatorDefault, _session, (__bridge CFURLRef) url);
-//            NSLog(@"%p", disk);
+            //            NSLog(@"%p", disk);
             [self diskGotVolumePath:disk];
         }
     }
     
-//    NSLog(@"%@", currentList);
+    //    NSLog(@"%@", currentList);
     
     
 }
@@ -224,7 +224,7 @@ static bool getVidAndPid(io_service_t device, int *vid, int *pid)
     int vid = [[self class] getVid:disk];
     int pid = [[self class] getPid:disk];
     NSString * volumePath = [[self class] getVolumePath:disk];
-//    NSLog(@"removed ----> vid: 0x%x, pid:0x%x, volume path:%@", vid, pid, volumePath);
+    //    NSLog(@"removed ----> vid: 0x%x, pid:0x%x, volume path:%@", vid, pid, volumePath);
     for (NSValue * value in _listeners) {
         id<IdentifyUSBMassStorageEvent> listener = [value nonretainedObjectValue];
         NSDictionary * matchingDict = nil;
@@ -233,14 +233,14 @@ static bool getVidAndPid(io_service_t device, int *vid, int *pid)
         }
         if(matchingDict.allKeys.count == 0){    //matching all
             dispatch_async(self.callbackQueue, ^{
-                [listener massStorageDeviceDidPlugOut:disk];
+                [listener massStorageDeviceDidPlugOut:volumePath];
             });
         }else if(matchingDict.allKeys.count == 1){
             if(matchingDict[kDiskDevicePropertyProductID] != nil ){
                 int matchingPid = ((NSNumber*)matchingDict[kDiskDevicePropertyProductID]).intValue;
                 if (matchingPid == pid) {
                     dispatch_async(self.callbackQueue, ^{
-                        [listener massStorageDeviceDidPlugOut:disk];
+                        [listener massStorageDeviceDidPlugOut:volumePath];
                     });
                 }
             }
@@ -248,7 +248,7 @@ static bool getVidAndPid(io_service_t device, int *vid, int *pid)
                 int matchingVid = ((NSNumber*)matchingDict[kDiskDevicePropertyVendorID]).intValue;
                 if(matchingVid == vid){
                     dispatch_async(self.callbackQueue, ^{
-                        [listener massStorageDeviceDidPlugOut:disk];
+                        [listener massStorageDeviceDidPlugOut:volumePath];
                     });
                 }
             }
@@ -258,7 +258,7 @@ static bool getVidAndPid(io_service_t device, int *vid, int *pid)
             
             if(matchingVid == vid && matchingPid == pid){
                 dispatch_async(self.callbackQueue, ^{
-                    [listener massStorageDeviceDidPlugOut:disk];
+                    [listener massStorageDeviceDidPlugOut:volumePath];
                 });
             }
         }
@@ -275,29 +275,35 @@ static bool getVidAndPid(io_service_t device, int *vid, int *pid)
     for (NSValue * value in _listeners) {
         id<IdentifyUSBMassStorageEvent> listener = [value nonretainedObjectValue];
         NSDictionary * matchingDict = nil;
-
+        
         if([listener respondsToSelector:@selector(matchingDict)]){
             matchingDict = [listener matchingDict];
         }
         if(matchingDict.allKeys.count == 0){    //matching all
+            CFRetain(disk);
             dispatch_async(self.callbackQueue, ^{
                 [listener massStorageDeviceDidPlugIn:disk];
+                CFRelease(disk);
             });
         }else if(matchingDict.allKeys.count == 1){    //matching one of them
             
             if(matchingDict[kDiskDevicePropertyProductID] != nil ){
                 int matchingPid = ((NSNumber*)matchingDict[kDiskDevicePropertyProductID]).intValue;
                 if (matchingPid == pid) {
+                    CFRetain(disk);
                     dispatch_async(self.callbackQueue, ^{
                         [listener massStorageDeviceDidPlugIn:disk];
+                        CFRelease(disk);
                     });
                 }
             }
             else if(matchingDict[kDiskDevicePropertyVendorID] != nil ){
                 int matchingVid = ((NSNumber*)matchingDict[kDiskDevicePropertyVendorID]).intValue;
                 if(matchingVid == vid){
+                    CFRetain(disk);
                     dispatch_async(self.callbackQueue, ^{
                         [listener massStorageDeviceDidPlugIn:disk];
+                        CFRelease(disk);
                     });
                 }
             }
@@ -306,16 +312,18 @@ static bool getVidAndPid(io_service_t device, int *vid, int *pid)
             int matchingVid = ((NSNumber*)matchingDict[kDiskDevicePropertyVendorID]).intValue;
             
             if(matchingVid == vid && matchingPid == pid){
+                CFRetain(disk);
                 dispatch_async(self.callbackQueue, ^{
                     [listener massStorageDeviceDidPlugIn:disk];
+                    CFRelease(disk);
                 });
             }
         }
     }
     
-
-//    NSString * volumePath = [[self class] getVolumePath:disk];
-//    NSLog(@"vid: 0x%x, pid:0x%x, volume path:%@", vid, pid, volumePath);
+    
+    //    NSString * volumePath = [[self class] getVolumePath:disk];
+    //    NSLog(@"vid: 0x%x, pid:0x%x, volume path:%@", vid, pid, volumePath);
     
     
 }
@@ -354,12 +362,15 @@ static bool getVidAndPid(io_service_t device, int *vid, int *pid)
     
     CFDictionaryRef diskinfo;
     diskinfo = DADiskCopyDescription(disk);
+    if (diskinfo == NULL){
+        return nil;
+    }
     CFURLRef fspath = CFDictionaryGetValue(diskinfo, kDADiskDescriptionVolumePathKey);
     
     char buf[MAXPATHLEN];
     if (CFURLGetFileSystemRepresentation(fspath, false, (UInt8 *)buf, sizeof(buf))) {
         return  [NSString stringWithUTF8String:buf];
-
+        
         /* Print the complete dictionary for debugging. */
         
     } else {
@@ -367,7 +378,7 @@ static bool getVidAndPid(io_service_t device, int *vid, int *pid)
     }
     
     return nil;
-
+    
 }
 
 @end

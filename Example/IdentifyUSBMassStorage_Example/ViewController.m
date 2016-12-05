@@ -50,7 +50,7 @@
     
 }
 
--(void)massStorageDeviceDidPlugOut:(DADiskRef)disk{
+-(void)massStorageDeviceDidPlugOut:(NSString)path{
     
 }
 
